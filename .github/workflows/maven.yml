@@ -26,4 +26,4 @@ jobs:
 
 
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag vijay:$(date)
+      run: docker build . --file Dockerfile --tag vijay:$(date %s)
