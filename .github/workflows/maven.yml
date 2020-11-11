@@ -26,10 +26,10 @@ jobs:
 
 
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag vijay89v/hello-docker-edrg:$(date +%s)
+      run: docker build . --file Dockerfile --tag edrg:$(date +%s)
       
-    - name: Docker Login
-      run: docker login
+    - name: Docker All Containers
+      run: docker ps -a
       
-    - name: Docker Image Push
-      run: docker push vijay89v/hello-docker-edrg:$(date +%s)
+    - name: Docker All Images
+      run: docker images
