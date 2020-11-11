@@ -26,4 +26,7 @@ jobs:
 
 
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag IMAGE_NAME
+      run: docker build . --file Dockerfile --tag vijau-edrg:$(date +%s)
+      
+    - name: Docker Login
+      run: docker logn
