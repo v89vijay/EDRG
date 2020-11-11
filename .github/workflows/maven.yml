@@ -34,7 +34,7 @@ jobs:
       run: docker images
       
     - name: Docker Login
-      run: docker login
+      run: docker login -u vijay89v -p K@lk!1989*
   
     - name: Docker Push Image
       run: docker push vijay89v/docker_edrg:latest
