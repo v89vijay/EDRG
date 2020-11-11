@@ -24,12 +24,17 @@ jobs:
       #run: mvn -B package --file pom.xml
       run: mvn clean install
 
-
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag edrg:$(date +%s)
+      run: docker build . --file Dockerfile --tag vijay89v/docker_edrg:latest
       
     - name: Docker All Containers
       run: docker ps -a
       
     - name: Docker All Images
       run: docker images
+      
+    - name: Docker Login
+      run: docker login
+  
+    - name: Docker Push Image
+      run: docker push vijay89v/docker_edrg:latest
