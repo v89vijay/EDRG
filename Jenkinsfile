@@ -8,7 +8,7 @@ pipeline{
         }
         stage('Set up Build'){
             steps{
-                sh 'mvn clean install'
+                echo 'second step clear' 
             }
         }
     }
